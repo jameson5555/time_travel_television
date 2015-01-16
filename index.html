@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en" ng-app="application">
+<head>
+    <meta charset="utf-8">
+    <title>Angular Sprout</title>
+    <link rel="stylesheet" href="styles/application.css"/>
+</head>
+<body>
+    <nav>
+        <ng-include src="'views/menu-partial.html'"/>
+    </nav>
+    
+    <div ng-view/></div>
+    <script src="library/angular.js"></script>
+    <script src="library/angular-route.js"></script>
+    <script src="application.js"></script>
+    <script src="constants/configuration-constants.js"></script>
+    <script src="services/menu-service.js"></script>
+    <script src="controllers/details-controller.js"></script>
+    <script src="controllers/error-controller.js"></script>
+    <script src="controllers/menu-controller.js"></script>
+    <script src="filters/to-date-string-filter.js"></script>
+</body>
+</html>

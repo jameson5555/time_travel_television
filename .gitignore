@@ -2,8 +2,9 @@
 nbproject
 manifest.mf
 build.xml
+server.js
 
 .project
 .settings
-.idea/*
+.idea/
 */node_modules
