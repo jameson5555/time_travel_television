@@ -1,13 +1,13 @@
 [
 	{
 		"id" : "item_1",
-		"name" : "item 1",
+		"name" : "Item 1",
 		"description" : "item 1 details",	
 		"timestamp" : "1349539521000"	
 	},
 	{
 		"id" : "item_2",
-		"name" : "item 2",
+		"name" : "Item 2",
 		"description" : "item 2 details",
 		"timestamp" : "1349651343000"	
 	}

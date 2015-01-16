@@ -1,11 +1,9 @@
-'use strict'
-
 /**
 * Defines application-wide key value pairs 
 */
 
-Application.Constants.constant('configuration', {
+Application.Constants.constant('configurationConstants', {
 
-		ITEMS_URL : 'menu/items.json'		
-		
+    ITEMS_URL : 'data/items.json'
+
 });

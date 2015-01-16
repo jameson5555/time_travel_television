@@ -16,7 +16,5 @@ angular.module('application', ['ngRoute', 'application.filters', 'application.se
     config(['$routeProvider', function ($routeProvider) {
         'use strict';
         $routeProvider.
-            when('/about', {templateUrl: 'about/about-partial.html'}).
-            when('/:id/', {templateUrl: 'details/details-partial.html'}).
-            otherwise({templateUrl: 'error/error-partial.html'});
+            when('/:id/', {templateUrl: 'templates/details-template.html'});
     }]);

@@ -7,7 +7,7 @@
 </head>
 <body>
     <nav>
-        <ng-include src="'views/menu-partial.html'"/>
+        <ng-include src="'templates/menu-template.html'"/>
     </nav>
     
     <div ng-view/></div>
@@ -17,8 +17,8 @@
     <script src="constants/configuration-constants.js"></script>
     <script src="services/menu-service.js"></script>
     <script src="controllers/details-controller.js"></script>
-    <script src="controllers/error-controller.js"></script>
     <script src="controllers/menu-controller.js"></script>
+    <script src="directives/menu-item-directive.js"></script>
     <script src="filters/to-date-string-filter.js"></script>
 </body>
 </html>

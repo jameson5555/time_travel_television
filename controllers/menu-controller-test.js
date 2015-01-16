@@ -1,9 +1,9 @@
 'use strict';
 
-describe('Menu controller', function() {
-  var mockMenu, controller, items, scope, $q, $rootScope, $compile, $httpBackend
+describe('Menu controller', function () {
+    var mockMenu, controller, items, scope, $q, $rootScope, $compile, $httpBackend;
 
-    beforeEach(function(){
+    beforeEach(function () {
 
         //Define any underlying mock data.
         items = [{
@@ -35,21 +35,21 @@ describe('Menu controller', function() {
         });
         
         //We laod all the module dependancies up front.
-    	module('application.filters', 'application.services', 'application.controllers', 'application.directives' , 'application.constants');
+        module('application.filters', 'application.services', 'application.controllers', 'application.directives' , 'application.constants');
 
         //Use the angular $provide service to mock any dependancies;
         module(function($provide) {
             $provide.value('menu', mockMenu);
         });
 
-        //Injecting all of our services in the "beforeEach" section allows us to avoid cluttering out tests. 	
-    	inject(function($injector, $controller){
-          	$q = $injector.get('$q')
-          	$rootScope = $injector.get('$rootScope');
+        //Injecting all of our services in the "beforeEach" section allows us to avoid cluttering out tests.    
+        inject(function($injector, $controller){
+            $q = $injector.get('$q')
+            $rootScope = $injector.get('$rootScope');
             $httpBackend = $injector.get('$httpBackend');
             scope = $rootScope.$new();
             controller = $controller('menu', {$scope: scope});
-    	});
+        });
 
 
     });

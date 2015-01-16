@@ -1,7 +1,10 @@
-'use strict'
+/**
+ * Manages the menu scope
+ */
+Application.Controllers.controller('menuController', ['menuService', '$scope', function (menuService, $scope) {
+    'use strict';
 
-Application.Controllers.controller('menu', ['menu', '$scope', function(menu, $scope){
-	
-	$scope.items = menu.get();
-	
+    menuService.get().then(function (items) {
+        $scope.items = items;
+    });
 }]);
