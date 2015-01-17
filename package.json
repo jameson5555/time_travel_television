@@ -1,0 +1,27 @@
+{
+  "name": "angular-sprout",
+  "version": "1.0.0",
+  "description": "The scalable angular seed app.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thedigitalself/angular-sprout.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thedigitalself/angular-sprout/issues"
+  },
+  "homepage": "https://github.com/thedigitalself/angular-sprout",
+  "devDependencies": {
+    "jasmine-core": "^2.1.3",
+    "karma": "^0.12.31",
+    "karma-coverage": "^0.2.7",
+    "karma-jasmine": "^0.3.4",
+    "karma-phantomjs-launcher": "^0.1.4"
+  }
+}

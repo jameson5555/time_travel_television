@@ -1,5 +1,6 @@
 **/.DS_Store
 nbproject
+coverage
 manifest.mf
 build.xml
 server.js

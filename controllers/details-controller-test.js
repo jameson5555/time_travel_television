@@ -1,6 +1,6 @@
 describe('Menu controller', function () {
     'use strict';
-    var mockMenuService, items, scope, $q, $rootScope;
+    var mockMenuService, mockRouteParams, items, scope, $q, $rootScope;
     beforeEach(function () {
 
         //Define any underlying mock data.
@@ -16,6 +16,10 @@ describe('Menu controller', function () {
             "timestamp" : "1349651343000"
         }];
 
+        mockRouteParams = {
+            id: 'item_1'
+        };
+
         //Create mocks before we define our provider values. Using jasnine spy objects allows us to
         //define mocks succinctly.
         mockMenuService = jasmine.createSpyObj('mockMenuService', ['get']);
@@ -24,7 +28,7 @@ describe('Menu controller', function () {
         mockMenuService.get.and.callFake(function () {
             var deferred;
             deferred = $q.defer();
-            deferred.resolve(items);
+            deferred.resolve(items[0]);
             return deferred.promise;
         });
 
@@ -34,6 +38,7 @@ describe('Menu controller', function () {
         //Use the angular $provide service to mock any dependancies;
         module(function ($provide) {
             $provide.value('menuService', mockMenuService);
+            $provide.value('$routeParams', mockRouteParams);
         });
 
         //Injecting all of our services in the "beforeEach" section allows us to avoid cluttering out tests.    
@@ -41,7 +46,7 @@ describe('Menu controller', function () {
             $q = $injector.get('$q');
             $rootScope = $injector.get('$rootScope');
             scope = $rootScope.$new();
-            $controller('menuController', {$scope: scope});
+            $controller('detailsController', {$scope: scope});
         });
     });
 
@@ -49,8 +54,8 @@ describe('Menu controller', function () {
         $rootScope.$digest();
     });
 
-    it('should load a list of items', function () {
+    it('should load the item with the passed id', function () {
         scope.$apply();
-        expect(scope.items).toEqual(items);
+        expect(scope.item).toEqual(items[0]);
     });
 });
