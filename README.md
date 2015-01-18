@@ -21,10 +21,10 @@ Keeping the directory hierachy flat makes it easy find files. I believe is using
  - The major module types: controllers, services, filters, contants, directives, etc get their own folders because the end up containing many cross cutting concerns.
  - Application folders (controllers, etc...) and configuration folders (data, etc...) live at the same level in the hierearchy. Use your build tool (grunt, etc..) to prepare deplyment folders.
 
-## Module files.
+## Module files
 Each instance of an angular module gets its own file. Monolithic controler, services, etc... are a potential maintenance nightmare.
 
-## Test files.
+## Test files
 Placing tests adjecent to tested modules makes it easier to find corresponding tests.
 
 ## Namespaces
