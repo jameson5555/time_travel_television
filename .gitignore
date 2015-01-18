@@ -4,8 +4,9 @@ coverage
 manifest.mf
 build.xml
 server.js
+node_modules
+npm-debug.log
 
 .project
 .settings
 .idea/
-*/node_modules
