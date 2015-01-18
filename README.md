@@ -1,5 +1,5 @@
 # angular-sprout — The scalable angular seed app
-Angular Sprout exists to give developers the simplest possible best practices base on which to build scalable angular applications. Its worth noting that, though minimal, Angular Sprout is highly opinionated and is not everything to everyone, or anyone for that matter.
+Angular Sprout exists to give developers the simplest possible best practices base on which to scale angular applications. Its worth noting that, though minimal, Angular Sprout is highly opinionated and is not everything to everyone, or anyone for that matter.
 
 ## Running Angular-Sprout
  - Point your webserver of choice to the root.
@@ -15,20 +15,20 @@ Angular Sprout exists to give developers the simplest possible best practices ba
  karma start karma-unit-config.js
  ```
 
-## Flatten Directories
-Keeping the directory hierachy flat makes it easy find files. I believe is using name convention to organize files leads to a more navigable hierarchy.
+## Flattened Directories
+Keeping the directory hierachy flat makes it easy find files. I believe in using name convention to organize files leads to a more navigable hierarchy.
 
- - The major module types: controllers, services, filters, contants, directives, etc get their own folders because the end up containing many cross cutting concerns.
- - Application folders (controllers, etc...) and configuration folders (data, etc...) live at the same level in the hierearchy. Use your build tool (grunt, etc..) to prepare deplyment folders.
+ - The major module types: controllers, services, filters, contants, directives, etc get their own folders because they end up containing many cross cutting concerns.
+ - Application folders (controllers, etc...) and configuration folders (data, etc...) live at the same level in the hierarchy. Use your build tool (grunt, etc..) to prepare deployment folders.
 
 ## Module files
 Each instance of an angular module gets its own file. Monolithic controler, services, etc... are a potential maintenance nightmare.
 
 ## Test files
-Placing tests adjecent to tested modules makes it easier to find corresponding tests.
+Placing tests adjecent to tested modules makes it harder to ignore testing.
 
 ## Namespaces
-giving each module type its own namespace off of a common one clarifies the sepeartion of concers, preserves the global scope and saves one having to instantiate anguar modues in every file.
+Giving each module type its own namespace off of a common one clarifies the sepeartion of concerns, preserves the global scope and saves one having to instantiate anguar modues in every file.
 
 ```
 var Application = Application || {};
@@ -43,6 +43,7 @@ Application.Directives = angular.module('application.directives', []);
 
 ## Directory Layout
 
+```
 constants/                    --> Application constants.
   configuration-constants.js	
 
@@ -75,7 +76,8 @@ templates/                    --> All view, directive and include templates.
 styles/
   application.css            
 
-index.html                  --> Application layout file (the main html template file of the app)
-application.js              --> application bootstrap
-karma-unit.config.js        --> Unit test Karma configuration files.
-package.json                --> Node dev dependancies.
+index.html                    --> Application layout file (the main html template file of the app)
+application.js                --> application bootstrap
+karma-unit.config.js          --> Unit test Karma configuration files.
+package.json                  --> Node dev dependancies.
+```
