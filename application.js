@@ -12,7 +12,7 @@ Application.Filters = angular.module('application.filters', []);
 Application.Directives = angular.module('application.directives', []);
 
 
-angular.module('application', ['ngRoute', 'application.filters', 'application.services', 'application.directives', 'application.constants', 'application.controllers', 'youtube-embed']).
+angular.module('application', ['youtube-embed', 'ngRoute', 'application.filters', 'application.services', 'application.directives', 'application.constants', 'application.controllers']).
     config(['$routeProvider', function ($routeProvider) {
         'use strict';
         $routeProvider.
