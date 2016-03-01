@@ -1,1 +1,17 @@
-@import 'normalize';
+@import url(https://fonts.googleapis.com/css?family=Orbitron:400,900,500,700);
+
+html, body {
+	font: 16px/1 arial, sans-serif;
+}
+header {
+	font-family: 'Orbitron';
+	h1 {
+		white-space: nowrap;
+		font-size: 7vw;
+		text-align: center;
+		padding: 1vh 1vw;
+	}
+}
+nav {
+	font-family: 'Orbitron';
+}

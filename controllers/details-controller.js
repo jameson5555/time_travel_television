@@ -7,6 +7,7 @@ Application.Controllers.controller('detailsController', ['menuService', '$scope'
     var randomVideo;
     var previousVideo;
     var newVideo;
+    var firstTime = true;
     id = $routeParams.id;
 
     function getVideoId(array) {
@@ -15,32 +16,41 @@ Application.Controllers.controller('detailsController', ['menuService', '$scope'
     function getRandomStartPoint(min, max) {
       return Math.floor(Math.random() * (max - min + 1)) + min;
     }
+    function changeChannel(currentVideo, item, player) {
+      newVideo = getVideoId(item.videoIds);
+      while (newVideo === currentVideo) {
+        newVideo = getVideoId(item.videoIds);
+        console.log('currentVideo: ',currentVideo);
+        console.log('newVideo: ',newVideo);
+        console.log('id is same ',newVideo);
+      }
+      console.log('id is unique', newVideo);
+      $scope.initialVideo = newVideo;
+      player.playVideo();
+    }
 
     menuService.get(id).then(function (item) {
-        $scope.item =  item;
-        randomVideo = getVideoId(item.videoIds);
-        $scope.initialVideo = randomVideo;
+      $scope.item =  item;
+      randomVideo = getVideoId(item.videoIds);
+      $scope.initialVideo = randomVideo;
 
-        $scope.$on('youtube.player.ready', function($event, player) {
+      $scope.$on('youtube.player.ready', function($event, player) {
+        if (firstTime) {
           var videoLength = player.getDuration();
           var startPoint = getRandomStartPoint(0,videoLength);
-          //player.seekTo(startPoint);
-        });
+          player.seekTo(startPoint);
+          firstTime = false;
+        }
+      });
 
-        $scope.$on('youtube.player.ended', function ($event, player) {
-          previousVideo = randomVideo;
-          newVideo = getVideoId(item.videoIds);
-          while (newVideo === previousVideo) {
-            newVideo = getVideoId(item.videoIds);
-          }
-          $scope.initialVideo = newVideo;
-          player.playVideo();
-        });
+      $scope.$on('youtube.player.ended', function ($event, player) {
+        changeChannel(randomVideo, item, player);
+      });
     });
     $scope.player = {
       vars: {
-        //autoplay: 1,
-        controls: 0,
+        autoplay: 1,
+        //controls: 0,
         modestbranding: 1,
         origin: 'http://jamesonmacarthur.com',
         showinfo: 0
