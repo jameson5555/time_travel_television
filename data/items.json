@@ -3,7 +3,12 @@
 		"id" : "80s",
 		"name" : "80s",
 		"description" : "",	
-		"videoIds": ["XBf0yJVMSzI", "sOnqjkJTMaA", "_6wFr2SHsmY"]
+		"videoIds": 
+			[
+				"XBf0yJVMSzI",
+				"sOnqjkJTMaA",
+				"_6wFr2SHsmY"
+			]
 	},
 	{
 		"id" : "90s",

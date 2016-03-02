@@ -18,3 +18,9 @@
 	height: 100%;
 	border: 0;
 }
+
+.dial {
+	@include size(20px);
+	background: silver;
+	display: none;
+}

@@ -1,7 +1,7 @@
 {
-  "name": "angular-sprout",
+  "name": "Time Travel Television",
   "version": "1.0.0",
-  "description": "The scalable angular seed app.",
+  "description": "",
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/thedigitalself/angular-sprout.git"
+    "url": "git@github.com:jameson5555/time_travel_television.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/thedigitalself/angular-sprout/issues"
+    "url": ""
   },
-  "homepage": "https://github.com/thedigitalself/angular-sprout",
+  "homepage": "http://jamesonmacarthur.com/time_travel_television",
   "devDependencies": {
     "jasmine-core": "^2.1.3",
     "karma": "^0.12.31",

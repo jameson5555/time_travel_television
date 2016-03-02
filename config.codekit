@@ -49,7 +49,7 @@
 	"\/data\/items.json": {
 		"fileType": 524288,
 		"ignore": 1,
-		"ignoreWasSetByUser": 0,
+		"ignoreWasSetByUser": 1,
 		"inputAbbreviatedPath": "\/data\/items.json",
 		"orderOutput": 0,
 		"outputAbbreviatedPath": "\/data\/items-min.json",
@@ -363,7 +363,7 @@
 		},
 	"\/libraries\/errors.json": {
 		"fileType": 524288,
-		"ignore": 1,
+		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/libraries\/errors.json",
 		"orderOutput": 0,
@@ -374,7 +374,7 @@
 		},
 	"\/libraries\/version.json": {
 		"fileType": 524288,
-		"ignore": 1,
+		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/libraries\/version.json",
 		"orderOutput": 0,
@@ -386,7 +386,7 @@
 	"\/package.json": {
 		"fileType": 524288,
 		"ignore": 1,
-		"ignoreWasSetByUser": 0,
+		"ignoreWasSetByUser": 1,
 		"inputAbbreviatedPath": "\/package.json",
 		"orderOutput": 0,
 		"outputAbbreviatedPath": "\/package-min.json",
