@@ -30,9 +30,6 @@ Application.Controllers.controller('detailsController', ['menuService', '$scope'
         } else console.log('id is same ',newVideo);
       }
     }
-    $scope.playAnother = function(player) {
-      player.playVideo();
-    }
 
     menuService.get(id).then(function (item) {
       $scope.item =  item;
