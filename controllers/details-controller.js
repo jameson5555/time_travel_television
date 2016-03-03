@@ -33,6 +33,22 @@ Application.Controllers.controller('detailsController', ['menuService', '$scope'
 
     menuService.get(id).then(function (item) {
       $scope.item =  item;
+      console.log('scope.item is ',$scope.item);
+      console.log("item is ", item);
+      if (item.name === '80s') {
+        console.log('80s man');
+        item.videoIds = [
+          "XBf0yJVMSzI",
+          "sOnqjkJTMaA",
+          "_6wFr2SHsmY"
+        ]
+      } else if (item.name === '90s') {
+        item.videoIds = [
+          "oCsbUSk5-O8",
+          "ms61I54CeQA"
+        ]
+      }
+
       randomVideo = getVideoId(item.videoIds);
       $scope.initialVideo = randomVideo;
 
