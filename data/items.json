@@ -1,5 +1,11 @@
 [
 	{
+		"id" : "70s",
+		"name" : "70s",
+		"description" : "",	
+		"videoIds": []
+	},
+	{
 		"id" : "80s",
 		"name" : "80s",
 		"description" : "",	
