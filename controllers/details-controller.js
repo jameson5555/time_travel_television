@@ -38,15 +38,15 @@ Application.Controllers.controller('detailsController', ['menuService', '$scope'
       if (item.name === '80s') {
         console.log('80s man');
         item.videoIds = [
-          "XBf0yJVMSzI",
-          "sOnqjkJTMaA",
-          "_6wFr2SHsmY"
-        ]
+          "XBf0yJVMSzI", // mtv first airing
+          "sOnqjkJTMaA", // thriller
+          "_6wFr2SHsmY" // 80s commercials
+        ];
       } else if (item.name === '90s') {
         item.videoIds = [
           "oCsbUSk5-O8",
           "ms61I54CeQA"
-        ]
+        ];
       }
 
       randomVideo = getVideoId(item.videoIds);
@@ -68,7 +68,7 @@ Application.Controllers.controller('detailsController', ['menuService', '$scope'
     $scope.player = {
       vars: {
         autoplay: 1,
-        controls: 0,
+        controls: 1,
         modestbranding: 1,
         origin: 'http://jamesonmacarthur.com',
         showinfo: 0

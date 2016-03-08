@@ -1,4 +1,24 @@
-
+.tv-container {
+	width: 90vw;
+	margin: 0 auto;
+	.outer {
+		border-radius: 5px;
+		&3 {
+			
+			background: silver;
+			padding: 0.25vh;
+		}
+		&2 {
+			background: gray;
+			padding: 1vh;
+			box-shadow: inset 0 0 0.1vh 0.1vh rgba(0,0,0,0.3);
+		}
+		&1 {
+			background: gray;
+			padding: 2vh;
+		}
+	}
+}
 .embed-responsive {
 	position: relative;
 	display: block;
