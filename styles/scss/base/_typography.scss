@@ -3,16 +3,6 @@
 html, body {
 	font: 16px/1 arial, sans-serif;
 }
-header {
-	font-family: 'Orbitron';
-	h1 {
-		white-space: nowrap;
-		font-size: 7vw;
-		text-align: center;
-		padding: 1vh 1vw;
-	}
-}
-nav {
-	font-family: 'Orbitron';
-	font-size: 5vw;
+header, nav {
+	font-family: 'Orbitron', arial, sans-serif;
 }

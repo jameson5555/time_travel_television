@@ -1,10 +1,14 @@
-<div ng-controller="detailsController" class='outer3'>
+<div ng-controller="detailsController" class='decade-{{item.id}}'>
 <!-- 	<h1>{{item.name}}</h1>
 	<p>{{item.description}}</p> -->
-	<div class='video-wrapper outer2'>
-		<div class="embed-responsive embed-responsive-16by9 outer1">
-			<youtube-video class="embed-responsive-item" video-id="initialVideo" player="tv" player-vars="player.vars"></youtube-video>
+	<div class='outer3'>
+		<div class='outer2'>
+			<div class='video-wrapper outer1'>
+				<div class="embed-responsive embed-responsive-16by9">
+					<youtube-video class="embed-responsive-item" video-id="initialVideo" player="tv" player-vars="player.vars"></youtube-video>
+				</div>
+				<div class='dial' ng-click='tv.playVideo()'></div>
+			</div>
 		</div>
-		<div class='dial' ng-click='tv.playVideo()'></div>
 	</div>
 </div>

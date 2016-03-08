@@ -1,0 +1,43 @@
+.decades {
+	margin-bottom: 2vh;
+	font-size: 6vw;
+	.menu {
+		list-style-type: none;
+		text-align: center;
+		border-top: 1px solid $border-color;
+		&>li {
+			display: inline-block;
+			position: relative;
+			padding-top: 5vh;
+			&:before {
+				content: '';
+				border-left: 1px solid $border-color;
+				@include position(absolute, 0px null 2vw 37%);
+				margin-left: -1px;
+			}
+			&:after {
+				content: '';
+				@include size(5px);
+				border-radius: 50%;
+				@include position(absolute, 0px null null 37%);
+				margin: -3px 0 0 -3px;
+				background: $border-color;
+			}
+			>a {
+				display: block;
+				background: $page-background;
+				z-index: 1;
+				position: relative;
+				padding: 2vw;
+				@include transition(transform, 0.3s ease-out);
+				@include transform(scale(0.7));
+			}
+			&.active a {
+				@include transform(scale(1));
+			}
+		}
+		&>li:not(:last-child) {
+			padding-right: 1em;
+		}
+	}
+}

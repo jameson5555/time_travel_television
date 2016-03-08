@@ -32,7 +32,7 @@ Application.Controllers.controller('detailsController', ['menuService', '$scope'
     }
 
     menuService.get(id).then(function (item) {
-      $scope.item =  item;
+      $scope.item = item;
       console.log('scope.item is ',$scope.item);
       console.log("item is ", item);
       if (item.name === '80s') {
@@ -68,7 +68,7 @@ Application.Controllers.controller('detailsController', ['menuService', '$scope'
     $scope.player = {
       vars: {
         autoplay: 1,
-        controls: 1,
+        controls: 0,
         modestbranding: 1,
         origin: 'http://jamesonmacarthur.com',
         showinfo: 0

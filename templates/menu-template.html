@@ -1,4 +1,4 @@
 {{items}}
-<ul class="menu" ng-controller="menuController">
-	<li ng-repeat="item in items"><a menu-item-directive/></li>
+<ul ng-controller="menuController" class="menu ">
+	<li ng-repeat="item in items" ng-class="{'active': item.id === states.activeItem}" ng-click="states.activeItem=item.id"><a menu-item-directive/></li>
 </ul>
