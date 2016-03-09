@@ -1,27 +1,64 @@
 .tv-container {
 	width: 74vw;
 	margin: 0 auto;
-	.decade-80s {
-		.outer {
-			border-radius: 5px;
-			&3 {
+	.decade- {
+		&70s {
+
+		}
+		&80s {
+			.outer {
+				&3 {
+					background: silver;
+					padding: 0.5vh;
+					border-radius: 5px;
+					position: relative;
+				}
+				&2 {
+					background: gray;
+					padding: 1vh 1vh 7vh;
+					border-radius: 5px;
+					position: relative;
+					&:after {
+						content: 'VHS';
+						@include position(absolute, null 25% 1.5vh 25%);
+						border: 1px solid silver;
+						height: 3vh;
+						color: silver;
+						font-size: 3.5vw;
+						line-height: 3vh;
+						text-align: center;
+					}
+				}
+				&1 {
+					background: gray;
+					padding: 2vh;
+					box-shadow: 0 0 1vh 1vh rgba(0,0,0,0.3);
+				}
+			}
+			.dial {
+				@include position(absolute, null 4vw 1.5vh null);
+				//@include size(3vh 5vw);
 				background: silver;
-				padding: 0.5vh;
-			}
-			&2 {
-				background: gray;
-				padding: 1vh 1vh 5vh;
-			}
-			&1 {
-				background: gray;
-				padding: 2vh;
-				box-shadow: 0 0 1vh 1vh rgba(0,0,0,0.3);
+				cursor: pointer;
+				display: inline-block;
+				height: 3.5vh;
+				width: 9vw;
+				.control {
+					display: inline-block;
+					padding: 0 1vw;
+					&1 {
+						@include position(absolute, 0.5vh null null 0px);
+						@include triangle(3vw, gray, left);
+					}
+					&2 {
+						@include position(absolute, 0.5vh 0px null null);
+						@include triangle(3vw, gray, right);
+					}
+				}
 			}
 		}
-		.dial {
-			@include size(20px);
-			background: silver;
-			display: none;
+		&90s {
+
 		}
 	}
 }
@@ -31,6 +68,7 @@
 	height: 0;
 	padding: 0;
 	overflow: hidden;
+	//padding-bottom: 70%;
 	&.embed-responsive-16by9 {
 		padding-bottom: 56.25%;
 	}
