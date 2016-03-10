@@ -40,6 +40,19 @@ Application.Controllers.controller('detailsController', ['menuService', '$scope'
           "b1c3GcQGd5U" // peter gunn
         ];
       }
+      if (item.name === '60s') {
+        item.videoIds = [
+          "Nk3ZN3dSeDk", // beach blanket bingo
+          "bBk9-m3wNLc", // 60s commercials (cigarrettes, etc.)
+          "TzclE11RNhc", // 60s commercials boys toys
+          "XHQ-35uRlfA", // dragnet
+          "wukv0VAkiLs", // dick van dyke
+          "F5zM5FfloSw", // the lucy show - lucy the bean queen
+          "RHcl84DqSFU", // beverly hillbillies
+          "hRsfKK34SFY", // tardis takes off for first time
+          "YN7pCuNtO6Q" // doctor who first intro
+        ];
+      }
       if (item.name === '70s') {
         item.videoIds = [
           "N8fkjTjM-lE", // funny 70s commercials
@@ -47,7 +60,8 @@ Application.Controllers.controller('detailsController', ['menuService', '$scope'
           "on2fRhovQP8", // shazam
           "IrwMyQ3_7P8", // the amazing spiderman
           "OxGMAskCA0w", // streets of san francisco
-          "SyKD4KagqbA" // steve martin standup snl
+          "SyKD4KagqbA", // steve martin standup snl
+          "XohfkDibhMc" // doctor who tom baker
         ];
       }
       if (item.name === '80s') {
@@ -61,6 +75,7 @@ Application.Controllers.controller('detailsController', ['menuService', '$scope'
           "w2BCG4YZy8Y", // 80s commercials vol 4
           "N6uEMOeDZsA", // want a new drug
           "lAD6Obi7Cag", // want my mtv
+          "Q0vlJodaDmc", // different strokes
           "Zn5OJGucveg", // madonna crazy for you
           "DNSUOFgj97M" // madonna material girl
         ];
@@ -74,7 +89,6 @@ Application.Controllers.controller('detailsController', ['menuService', '$scope'
           "Jne9t8sHpUc", // alanis morisette ironic
           "010KyIQjkTk", // kris kross jump
           "esEdC0c3YI4", // only happy when it rains
-          "Q0vlJodaDmc", // different strokes
           "S5QKW5-0cBo", // home improvement
           "cZaglHQOgt8" // outshined live
         ];

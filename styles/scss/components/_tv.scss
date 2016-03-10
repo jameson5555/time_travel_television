@@ -1,64 +1,280 @@
-.tv-container {
-	width: 74vw;
-	margin: 0 auto;
-	.decade- {
-		&70s {
+$transition: color 0.3s ease-out, background 0.3s ease-out, border-radius 0.3s ease-out;
+$wood: darken(#966F33, 15%);
+$gold: darken(gold, 15%);
 
+.tv-container {
+	width: 88vmin;
+	margin: 0 auto;
+	.outer {
+		&3 {
+			@include transition($transition);
+		}
+		&2 {
+			@include transition($transition);
+		}
+		&1 {
+			@include transition($transition);
+		}
+	}
+	.decade- {
+		&60s {
+			.outer {
+				&3 {
+					background: $wood;
+					border: 1px solid black;
+					padding: 0.75vmin;
+					border-radius: 1vmin;
+					position: relative;
+				}
+				&2 {
+					background: $wood;
+					padding: 3vmin 15vmin 3vmin 3vmin;
+					position: relative;
+					&:after {
+						content: '';
+						@include position(absolute, 2.75vmin 0.5vmin 2.75vmin null);
+						border: 0.01vmin solid black;
+						width: 11vmin;
+						color: silver;
+						font-size: 3.5vmin;
+						line-height: 6vmin;
+						padding-top: 0.3vmin;
+						text-align: center;
+						background: linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0.8) 50%, rgba(0,0,0,0.0) 50%, rgba(0,0,0,0.0));
+						background-size: 100% 1vmin;
+					}
+				}
+				&1 {
+					background: silver;
+					padding: 1.5vmin;
+				}
+			}
+			.screen {
+				position: relative;
+				padding-bottom: 75%;
+				&:after {
+					content: '';
+					@include position(absolute, 0px 0px 0px 0px);
+					@include size(100%);
+					border-radius: 14vmin;
+					box-shadow: inset 0 0 0 1vmin gray, 0 0 0 10vmin gray;
+					pointer-events: none;
+				}
+			}
+			.dial {
+				@include position(absolute, 1vmin 1.3vmin null null);
+				width: 8vmin;
+				height: 17vmin;
+				z-index: 2;
+				cursor: pointer;
+				.control {
+					@include position(absolute, null 1vmin 3vmin null);
+					border-radius: 50%;
+					background: $gold;
+					border: 1px solid black;
+					cursor: pointer;
+					@include size(8vmin)
+					cursor: pointer;
+					&2 {
+						background: rgba(255,255,255, 0.3);
+						@include size(6vmin);
+						right: 2vmin;
+						bottom: 4vmin;
+					}
+				}
+			}
+		}
+		&70s {
+			.outer {
+				&3 {
+					background: $wood;
+					border: 1px solid black;
+					padding: 0.75vmin;
+					border-radius: 1vmin;
+					position: relative;
+				}
+				&2 {
+					background: $wood;
+					padding: 1vmin 12vmin 1vmin 1vmin;
+					position: relative;
+					&:after {
+						content: '';
+						@include position(absolute, 1.75vmin 0.5vmin 1.75vmin null);
+						border: 0.01vmin solid black;
+						width: 8vmin;
+						color: silver;
+						font-size: 3.5vmin;
+						line-height: 6vmin;
+						padding-top: 0.3vmin;
+						text-align: center;
+						background: linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0.8) 50%, rgba(0,0,0,0.0) 50%, rgba(0,0,0,0.0));
+						background-size: 100% 1vmin;
+					}
+				}
+				&1 {
+					background: black;
+					padding: 1.5vmin;
+					border: 0.5vmin solid rgba(0,0,0,0.3);
+				}
+			}
+			.screen {
+				position: relative;
+				padding-bottom: 68%;
+				&:after {
+					content: '';
+					@include position(absolute, 0px 0px 0px 0px);
+					@include size(100%);
+					border-radius: 4vmin;
+					box-shadow: inset 0 0 0 0vmin black, 0 0 0 10vmin black;
+					pointer-events: none;
+				}
+			}
+			.dial {
+				@include position(absolute, null 1.3vmin 1vmin null);
+				width: 8vmin;
+				height: 17vmin;
+				z-index: 2;
+				cursor: pointer;
+				.control {
+					@include position(absolute, null 1vmin 3vmin null);
+					border-radius: 50%;
+					background: silver;
+					border: 1px solid black;
+					cursor: pointer;
+					@include size(5vmin)
+					cursor: pointer;
+					&2 {
+						bottom: 10vmin;
+					}
+				}
+			}
 		}
 		&80s {
 			.outer {
 				&3 {
-					background: silver;
-					padding: 0.5vh;
-					border-radius: 5px;
+					background: white;
+					border: 1px solid silver;
+					padding: 0.75vmin;
+					border-radius: 5vmin;
 					position: relative;
 				}
 				&2 {
 					background: gray;
-					padding: 1vh 1vh 7vh;
-					border-radius: 5px;
+					padding: 1vmin 1vmin 10vmin;
+					border-radius: 4vmin;
 					position: relative;
 					&:after {
 						content: 'VHS';
-						@include position(absolute, null 25% 1.5vh 25%);
-						border: 1px solid silver;
-						height: 3vh;
+						@include position(absolute, null 28% 1.5vmin 28%);
+						border: 0.01vmin solid silver;
+						height: 6vmin;
 						color: silver;
-						font-size: 3.5vw;
-						line-height: 3vh;
+						font-size: 3.5vmin;
+						line-height: 6vmin;
+						padding-top: 0.3vmin;
 						text-align: center;
 					}
 				}
 				&1 {
 					background: gray;
-					padding: 2vh;
-					box-shadow: 0 0 1vh 1vh rgba(0,0,0,0.3);
+					padding: 1.5vmin;
+					border-radius: 4vmin;
+					border: 0.5vmin solid rgba(0,0,0,0.3);
+				}
+			}
+			.screen {
+				position: relative;
+				padding-bottom: 75%;
+				&:after {
+					content: '';
+					@include position(absolute, 0px 0px 0px 0px);
+					@include size(100%);
+					border-radius: 4vmin;
+					box-shadow: inset 0 0 0 0vmin gray, 0 0 0 10vmin gray;
+					pointer-events: none;
 				}
 			}
 			.dial {
-				@include position(absolute, null 4vw 1.5vh null);
+				@include position(absolute, null 6vmin 2vmin null);
 				//@include size(3vh 5vw);
 				background: silver;
 				cursor: pointer;
 				display: inline-block;
-				height: 3.5vh;
-				width: 9vw;
+				height: 6vmin;
+				width: 9vmin;
+				padding-top: 1vmin;
 				.control {
 					display: inline-block;
-					padding: 0 1vw;
+					padding: 0 1.2vmin;
 					&1 {
-						@include position(absolute, 0.5vh null null 0px);
-						@include triangle(3vw, gray, left);
+						@include triangle(4vmin, gray, left);
+						float: left;
 					}
 					&2 {
-						@include position(absolute, 0.5vh 0px null null);
-						@include triangle(3vw, gray, right);
+						@include triangle(4vmin, gray, right);
+						float: right;
 					}
 				}
 			}
 		}
 		&90s {
-
+			.outer {
+				&3 {
+					background: black;
+					border: 1px solid silver;
+					padding: 0.75vmin;
+					border-radius: 2vmin;
+					position: relative;
+				}
+				&2 {
+					background: gray;
+					padding: 1vmin 1vmin 8vmin;
+					border-radius: 1vmin;
+					position: relative;
+					&:after {
+						content: 'DVD';
+						@include position(absolute, null 28% 1.5vmin 28%);
+						border: 0.01vmin solid black;
+						height: 4vmin;
+						color: black;
+						font-size: 3.5vmin;
+						line-height: 4vmin;
+						padding-top: 0.3vmin;
+						text-align: center;
+					}
+				}
+				&1 {
+					background: black;
+					padding: 1.5vmin;
+					border-radius: 1vmin;
+				}
+			}
+			.screen {
+				padding-bottom: 60%;
+			}
+			.dial {
+				@include position(absolute, null 6vmin 1.5vmin null);
+				//@include size(3vh 5vw);
+				background: gray;
+				border: 1px solid black;
+				cursor: pointer;
+				display: inline-block;
+				height: 5vmin;
+				width: 9vmin;
+				padding-top: 0.5vmin;
+				.control {
+					display: inline-block;
+					padding: 0 1vmin;
+					&1 {
+						@include triangle(3vmin, black, left);
+						float: left;
+					}
+					&2 {
+						@include triangle(3vmin, black, right);
+						float: right;
+					}
+				}
+			}
 		}
 	}
 }

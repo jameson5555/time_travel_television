@@ -1,6 +1,6 @@
 .decades {
-	margin-bottom: 2vh;
-	font-size: 6vw;
+	margin-bottom: 2vmin;
+	font-size: 6vmin;
 	.menu {
 		list-style-type: none;
 		text-align: center;
@@ -8,7 +8,7 @@
 		&>li {
 			display: inline-block;
 			position: relative;
-			padding-top: 5vh;
+			padding-top: 5vmin;
 			&:before {
 				content: '';
 				border-left: 1px solid $border-color;
@@ -28,7 +28,7 @@
 				background: $page-background;
 				z-index: 1;
 				position: relative;
-				padding: 2vw;
+				padding: 2vmin;
 				@include transition(transform, 0.3s ease-out);
 				@include transform(scale(0.6));
 			}
