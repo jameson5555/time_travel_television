@@ -12,7 +12,7 @@
 			&:before {
 				content: '';
 				border-left: 1px solid $border-color;
-				@include position(absolute, 0px null 2vw 47%);
+				@include position(absolute, 0px null 8vmin 47%);
 				margin-left: -1px;
 			}
 			&:after {
@@ -25,7 +25,6 @@
 			}
 			>a {
 				display: block;
-				background: $page-background;
 				z-index: 1;
 				position: relative;
 				padding: 2vmin;
