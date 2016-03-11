@@ -7,7 +7,7 @@
 	.spiral {
 		border-radius: 50%;
 		@include size(100vmin);
-		box-shadow: 0 -10vmin 10vmin rgba(purple,0.2), inset 0 10vmin 10vmin rgba(purple,0.2);
+		box-shadow: -3vmin -10vmin 10vmin rgba(purple,0.2), inset 3vmin 10vmin 10vmin rgba(purple,0.2);
 		position: absolute;
 		&1 {
 			top: -50%;
