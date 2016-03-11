@@ -25,14 +25,20 @@
 			}
 			>a {
 				display: block;
+				color: #000;
 				z-index: 1;
 				position: relative;
 				padding: 2vmin;
 				@include transition(transform, 0.3s ease-out);
 				@include transform(scale(0.6));
 			}
-			&.active a {
-				@include transform(scale(1));
+			&.active {
+				&:before {
+					bottom: 10vmin;
+				}
+				>a {
+					@include transform(scale(1));
+				}
 			}
 		}
 	}
