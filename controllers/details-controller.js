@@ -113,7 +113,7 @@ Application.Controllers.controller('detailsController', ['menuService', '$scope'
     $scope.player = {
       vars: {
         autoplay: 1,
-        controls: 1,
+        controls: 0,
         modestbranding: 1,
         origin: 'http://jamesonmacarthur.com',
         showinfo: 0
