@@ -17,6 +17,20 @@
     </nav>
     
     <div class='tv-container' ng-view/></div>
+
+    <div class='time-vortex'>
+    	<div class='spiral spiral1'></div>
+    	<div class='spiral spiral2'></div>
+    	<div class='spiral spiral3'></div>
+    	<div class='spiral spiral4'></div>
+    	<div class='spiral spiral5'></div>
+    	<div class='spiral spiral6'></div>
+    	<div class='spiral spiral7'></div>
+    	<div class='spiral spiral8'></div>
+    </div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    
     <script src="libraries/angular.js"></script>
     <script src="libraries/angular-route.js"></script>
     <script src="application.js"></script>
@@ -29,5 +43,12 @@
 
     <script src="https://www.youtube.com/iframe_api"></script>
 		<script src="libraries/angular-youtube-embed.js"></script>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TimelineMax.min.js"></script>
+
+		<script>
+			var rotation = TweenMax.to($('.time-vortex'), 200, {rotation:360, ease:Linear.easeNone, repeat: -1, paused: false});
+		</script>
 </body>
 </html>

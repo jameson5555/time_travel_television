@@ -1,0 +1,49 @@
+.time-vortex {
+	//box-shadow: inset 0 0 100vmin rgba(0,0,0,0.3);
+	@include position(absolute, 0px 0px 0px 0px);
+	@include size(100vmin);
+	border-radius: 50%;
+	margin: 25vmin auto 0;
+	.spiral {
+		border-radius: 50%;
+		@include size(100vmin);
+		box-shadow: 0 -10vmin 10vmin rgba(purple,0.2), inset 0 10vmin 10vmin rgba(purple,0.2);
+		position: absolute;
+		&1 {
+			top: -50%;
+			@include transform(rotate(90deg));
+		}
+		&2 {
+			top: -35%;
+			right: -35%;
+			@include transform(rotate(135deg));
+		}
+		&3 {
+			right: -50%;
+			@include transform(rotate(180deg));
+		}
+		&4 {
+			right: -35%;
+			bottom: -35%;
+			@include transform(rotate(225deg));
+		}
+		&5 {
+			bottom: -50%;
+			@include transform(rotate(270deg));
+		}
+		&6 {
+			bottom: -35%;
+			left: -35%;
+			@include transform(rotate(315deg));
+		}
+		&7 {
+			left: -50%;
+			@include transform(rotate(0deg));
+		}
+		&8 {
+			left: -35%;
+			top: -35%;
+			@include transform(rotate(45deg));
+		}
+	}
+}
