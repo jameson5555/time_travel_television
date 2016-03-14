@@ -4,14 +4,14 @@
 	.menu {
 		list-style-type: none;
 		text-align: center;
-		border-top: 1px solid $border-color;
+		border-top: 1px solid $brown;
 		&>li {
 			display: inline-block;
 			position: relative;
 			padding-top: 5vmin;
 			&:before {
 				content: '';
-				border-left: 1px solid $border-color;
+				border-left: 1px solid $brown;
 				@include position(absolute, 0px null 8vmin 47%);
 				margin-left: -1px;
 			}
@@ -21,11 +21,11 @@
 				border-radius: 50%;
 				@include position(absolute, 0px null null 47%);
 				margin: -3px 0 0 -3px;
-				background: $border-color;
+				background: $brown;
 			}
 			>a {
 				display: block;
-				color: #000;
+				color: $brown;
 				z-index: 1;
 				position: relative;
 				padding: 2vmin;

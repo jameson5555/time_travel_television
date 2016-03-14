@@ -1,13 +1,12 @@
 .time-vortex {
 	//box-shadow: inset 0 0 100vmin rgba(0,0,0,0.3);
-	@include position(absolute, 0px 0px 0px 0px);
-	@include size(100vmin);
+	@include position(absolute, -50vmin -50vmin null -50vmin);
+	@include size(200vmin);
 	border-radius: 50%;
-	margin: 25vmin auto 0;
 	.spiral {
 		border-radius: 50%;
-		@include size(100vmin);
-		box-shadow: -3vmin -10vmin 10vmin rgba(purple,0.2), inset 3vmin 10vmin 10vmin rgba(purple,0.2);
+		@include size(200vmin);
+		box-shadow: -0vmin -20vmin 0vmin rgba($orange,0.2), inset 0vmin 20vmin 0vmin rgba($orange-lt,0.2);
 		position: absolute;
 		&1 {
 			top: -50%;

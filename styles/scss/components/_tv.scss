@@ -5,6 +5,8 @@ $gold: darken(gold, 15%);
 .tv-container {
 	width: 88vmin;
 	margin: 0 auto;
+	position: relative;
+	z-index: 2;
 	.outer {
 		&3 {
 			@include transition($transition);
