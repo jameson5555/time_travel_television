@@ -1,8 +1,8 @@
 .time-vortex {
 	//box-shadow: inset 0 0 100vmin rgba(0,0,0,0.3);
-	@include position(absolute, -50vmin -50vmin null -50vmin);
+	@include position(absolute, 50% null null 50%);
 	@include size(200vmin);
-	border-radius: 50%;
+	margin: -100vmin 0 0 -100vmin;
 	.spiral {
 		border-radius: 50%;
 		@include size(200vmin);
