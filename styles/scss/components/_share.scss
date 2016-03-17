@@ -1,0 +1,10 @@
+.share {
+	@include position(fixed, null null 0px 0px);
+	list-style-type: none;
+	li {
+		display: inline-block;
+	}
+	svg {
+		color: $brown;
+	}
+}

@@ -8,6 +8,13 @@ Application.Controllers.controller('menuController', ['menuService', '$scope', '
     $scope.states.activeItem = $scope.location;
 
     menuService.get().then(function (items) {
-        $scope.items = items;        
+        $scope.items = items;
+        
+        // if (!$scope.states.activeItem) {
+        //   var welcome = $('<div>', {
+        //     'text': 'Choose a decade!',
+        //     'class': 'welcome'
+        //   }).insertAfter('.decades');
+        // }
     });
 }]);

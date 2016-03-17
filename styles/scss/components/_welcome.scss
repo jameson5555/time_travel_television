@@ -1,0 +1,16 @@
+.welcome {
+	font-weight: 700;
+	font-size: 10vmin;
+	line-height: 1.3;
+	text-align: center;
+	text-shadow: 0.75vmin 0.75vmin 0 $tan, 1.5vmin 1.5vmin 0 $orange-lt, 2vmin 2vmin 0 $tan;
+	@include position(fixed, 50% null null 50%);
+	@include size(80vmin);
+	margin-top: -40vmin;
+	margin-left: -40vmin;
+	pointer-events: none;
+	display: block;
+	.text {
+		@include vertical-align;
+	}
+}

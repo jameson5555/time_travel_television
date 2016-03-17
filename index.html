@@ -1,9 +1,74 @@
 <!doctype html>
 <html lang="en" ng-app="application">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1, minimum-scale=1">
+    
     <title>Time Travel Television</title>
+
+
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="content-language" content="en">
+    <meta http-equiv="imagetoolbar" content="no">
+
+    <meta name="author" content="Time Travel Television">
+    <meta name="cache-control" content="public">
+    <meta name="company" content="Time Travel Television">
+    <meta name="content-language" content="en">
+    <meta name="copyright" content="Copyright &copy; 2016 Time Travel Television, All Rights Reserved">
+    <meta name="country" content="USA">
+    <meta name="coverage" content="worldwide">
+    <meta name="description" content="Glimpse the past through old-school TV.">
+    <meta name="distribution" content="global">
+    <meta name="DC.title" content="Time Travel Television">
+    <meta name="googlebot" content="index,follow">
+    <meta name="keywords" content="time travel, vintage television, history">
+    <meta name="language" content="en">
+    <meta name="revisit-after" content="7 days">
+    <meta name="robots" content="noodp">
+    <meta name="robots" content="index,follow">
+
+    <!-- Mobile Meta Tags -->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1, minimum-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <!-- Microsoft Meta Tags -->
+    <meta name="application-name" content="Time Travel Television">
+    <meta name="msapplication-tooltip" content="Visit Time Travel Television">
+    <!-- <meta name="msapplication-TileImage" content="http://briosum.com/images/apple/Icon-72@2x.png"> -->
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-starturl" content="https://timetraveltelevision.com">
+
+    <!-- Twitter Meta Tags -->
+    <!-- <meta property="twitter:card" content="player"> -->
+    <!-- <meta property="twitter:site" content="@briosum"> -->
+    <meta property="twitter:domain" content="timetraveltelevision.com">
+    <meta property="twitter:creator" content="@jamacart">
+    <meta property="twitter:title" content="Briosum - Ambient Chill Music">
+    <!-- <meta property="twitter:image" content="http://briosum.com/images/app-icon.jpg"> -->
+    <meta property="twitter:description" content="Glimpse the past through old-school TV.">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="profile">
+    <meta property="og:url" content="http://briosum.com">
+    <meta property="og:title" content="Time Travel Television">
+    <meta property="og:site_name" content="Time Travel Television">
+    <!-- <meta property="og:image" content="http://briosum.com/images/app-icon.jpg"> -->
+    <meta property="og:image:width" content="500">
+    <meta property="og:image:height" content="500">
+    <meta property="og:description" content="Glimpse the past through old-school TV.">
+    <meta property="og:locality" content="United States">
+    <meta property="og:country-name" content="United States">
+    <!-- <meta property="fb:app_id" content="1729016893986629"> -->
+
+    <!-- Dublin Core Meta Tags -->
+    <meta name="dc:language" content="en_US">
+    <meta name="dc:title" content="Time Travel Television">
+    <meta name="dc:source" content="http://timetraveltelevision.com/">
+    <meta name="dc:description" content="Glimpse the past through old-school TV.">
+
+
     <link rel="stylesheet" href="styles/application.css"/>
 </head>
 <body>
@@ -29,6 +94,14 @@
     	<div class='spiral spiral8'></div>
     </div>
 
+    <ul class='share'>
+    	<li><i class='svg-icon icon-facebook'></i></li>
+    	<li><i class='svg-icon icon-twitter'></i></li>
+    	<li><i class='svg-icon icon-donate'></i></li>
+    	<li><i class='svg-icon icon-github'></i></li>
+    	<li><i class='svg-icon icon-contribute'></i></li>
+    </ul>
+
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     
     <script src="libraries/angular.js"></script>
@@ -48,7 +121,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TimelineMax.min.js"></script>
 
 		<script>
-			var rotation = TweenMax.to($('.time-vortex'), 100, {rotation:360, ease:Linear.easeNone, repeat: -1, paused: false});
+			var vortexRotation = TweenMax.to($('.time-vortex'), 100, {rotation:360, ease:Linear.easeNone, repeat: -1, paused: false});
+			loadIcons();
 		</script>
 
 		<script>

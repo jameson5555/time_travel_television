@@ -32,6 +32,14 @@
 				@include transition(transform, 0.3s ease-out);
 				@include transform(scale(0.6));
 			}
+			&:hover {
+				&:before {
+					bottom: 9vmin;
+				}
+				>a {
+					@include transform(scale(0.8));
+				}
+			}
 			&.active {
 				&:before {
 					bottom: 10vmin;

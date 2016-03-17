@@ -20,21 +20,21 @@ Application.Controllers.controller('detailsController', ['menuService', '$scope'
       newVideo = currentVideo;
       while (newVideo === currentVideo) {
         newVideo = getVideoId(item.videoIds);
-        console.log('currentVideo: ',currentVideo);
-        console.log('newVideo: ',newVideo);
+        // console.log('currentVideo: ',currentVideo);
+        // console.log('newVideo: ',newVideo);
         
         if (newVideo !== currentVideo) {
           $scope.initialVideo = newVideo;
           player.playVideo();
-          console.log('id is unique', newVideo);
-        } else console.log('id is same ',newVideo);
+          // console.log('id is unique', newVideo);
+        } //else console.log('id is same ',newVideo);
       }
     }
 
     menuService.get(id).then(function (item) {
       $scope.item = item;
-      console.log('scope.item is ',$scope.item);
-      console.log("item is ", item);
+      // console.log('scope.item is ',$scope.item);
+      // console.log("item is ", item);
       if (item.name === '50s') {
         item.videoIds = [
           "b1c3GcQGd5U" // peter gunn
@@ -80,7 +80,7 @@ Application.Controllers.controller('detailsController', ['menuService', '$scope'
           "DNSUOFgj97M", // madonna material girl
           "8dnUs2AqWvs" // where's the beef
         ];
-      } else if (item.name === '90s') {
+      } if (item.name === '90s') {
         item.videoIds = [
           "oCsbUSk5-O8", // nirvana unplugged
           "ms61I54CeQA", // creed parody

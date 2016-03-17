@@ -1,0 +1,4 @@
+@mixin vertical_align {
+	@include transform(translateY(-50%));
+	@include position(relative, 50% null null null);
+}

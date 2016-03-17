@@ -1,0 +1,6 @@
+.svg-icon {
+	display: inline-block;
+	svg {
+		@include size(10vmin);
+	}
+}

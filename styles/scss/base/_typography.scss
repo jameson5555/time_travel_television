@@ -1,9 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Orbitron:400,900,500,700);
 
 html, body {
-	font: 16px/1 arial, sans-serif;
+	font: 16px/1 'Orbitron', arial, sans-serif;
 	color: $brown;
 }
-header, nav {
-	font-family: 'Orbitron', arial, sans-serif;
+h1, a {
+	font-weight: 700;
 }
