@@ -5,5 +5,7 @@
 		text-align: center;
 		padding: 4vmin 1vmin;
 		text-shadow: 0.25vmin 0.25vmin 0 $tan, 0.5vmin 0.5vmin 0 $orange-lt, 1vmin 1vmin 0 $tan;
+		z-index: 1;
+		position: relative;
 	}
 }
