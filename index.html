@@ -94,13 +94,9 @@
     	<div class='spiral spiral8'></div>
     </div>
 
-    <ul class='share'>
-    	<li><i class='svg-icon icon-facebook'></i></li>
-    	<li><i class='svg-icon icon-twitter'></i></li>
-    	<li><i class='svg-icon icon-donate'></i></li>
-    	<li><i class='svg-icon icon-github'></i></li>
-    	<li><i class='svg-icon icon-contribute'></i></li>
-    </ul>
+		<div class='share-container'>
+    	<ng-include src="'templates/share-template.html'"/>
+    </div>
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     
@@ -111,6 +107,7 @@
     <script src="services/menu-service.js"></script>
     <script src="controllers/details-controller.js"></script>
     <script src="controllers/menu-controller.js"></script>
+    <script src="controllers/share-controller.js"></script>
     <script src="directives/menu-item-directive.js"></script>
     <script src="filters/to-date-string-filter.js"></script>
 
@@ -121,19 +118,46 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TimelineMax.min.js"></script>
 
 		<script>
-			var vortexRotation = TweenMax.to($('.time-vortex'), 100, {rotation:360, ease:Linear.easeNone, repeat: -1, paused: false});
-			loadIcons();
+			//var vortexRotation = TweenMax.to($('.time-vortex'), 100, {rotation:360, ease:Linear.easeNone, repeat: -1, paused: false});
+			
 		</script>
 
 		<script>
+			// Google Analytics
 		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
 		  ga('create', 'UA-59429618-2', 'auto');
 		  ga('send', 'pageview');
-
 		</script>
+
+		<!-- Facebook SDK -->
+		<div id="fb-root"></div>
+		<script>(function(d, s, id) {
+		var js, fjs = d.getElementsByTagName(s)[0];
+		if (d.getElementById(id)) return;
+		js = d.createElement(s); js.id = id;
+		js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=285883581517328"; // appId must be valid
+		fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
+
+		<!-- Twitter SDK -->
+		<script>window.twttr = (function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0],
+	    t = window.twttr || {};
+	  if (d.getElementById(id)) return t;
+	  js = d.createElement(s);
+	  js.id = id;
+	  js.src = "https://platform.twitter.com/widgets.js";
+	  fjs.parentNode.insertBefore(js, fjs);
+	  t._e = [];
+	  t.ready = function(f) {
+	    t._e.push(f);
+	  };
+	  return t;
+	}(document, "script", "twitter-wjs"));</script>
+		
+
 </body>
 </html>

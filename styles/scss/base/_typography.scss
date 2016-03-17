@@ -7,3 +7,13 @@ html, body {
 h1, a {
 	font-weight: 700;
 }
+button {
+	outline: none;
+}
+a {
+	color: $orange-lt;
+	@include transition(color 0.2s ease-out);
+	&:hover {
+		color: lighten($orange-lt, 10%);
+	}
+}

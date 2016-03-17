@@ -1,10 +1,61 @@
+.share-container {
+	@include position(fixed, null 0px 0px 0px);
+	.message {
+		>div {
+			padding: 4vmin 2vmin 2vmin;
+			color: $tan;
+			font-size: 5vmin;
+			line-height: 1.3;
+			font-family: arial, sans-serif;
+			form {
+				margin-top: 3vmin;
+			}
+		}
+	}
+	.extra-buttons {
+		padding: 2vmin;
+	}
+}
 .share {
-	@include position(fixed, null null 0px 0px);
-	list-style-type: none;
+	background: $brown;
+	padding-right: 0.5vmin;
+	border-top-right-radius: 5vmin;
+	@include transform(translateX(calc(-100% + 13vmin)));
+	@include transition(transform, 0.3s ease-out);
+	&.open {
+		@include transform(translateX(0));
+		.show-btn {
+			@include transform(rotate(45deg) translate(1vmin, 1vmin));
+		}
+	}
+	ul {
+		list-style-type: none;
+		@include clearfix;
+	}
 	li {
-		display: inline-block;
+		display: block;
+		float: left;
+	}
+	button {
+		@include backface-visibility(hidden);
+		padding: 3vmin 0 1vmin 4vmin;
+		&:hover {
+			svg {
+				color: $orange-lt;
+			}
+		}
 	}
 	svg {
-		color: $brown;
+		color: $tan;
+		@include size(6vmin);
+		@include transition(color, 0.2s ease-out);
+	}
+	.show-btn {
+		float: right;
+		@include transition(transform, 0.5s ease-out);
+		button {
+			padding-left: 0;
+			padding-right: 4vmin;
+		}
 	}
 }
