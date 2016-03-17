@@ -1,7 +1,6 @@
 .share {
 	@include position(fixed, null null 0px 0px);
 	list-style-type: none;
-	display: none;
 	li {
 		display: inline-block;
 	}
