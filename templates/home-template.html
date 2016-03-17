@@ -1,4 +1,4 @@
-<div class='welcome'><div class='text'>Choose a decade!</div></div>
+<div class='welcome'><div class='text'>Choose a Decade!</div></div>
 
 <script>
 	$('.decades .menu li').removeClass('active');
@@ -7,6 +7,4 @@
 	var welcomeAppear = new TimelineMax();
 	welcomeAppear.from(welcome, 2, {scale: 0, delay: 1});
 	welcomeAppear.from(welcome, 2, {rotation:"-=1000", ease: Power4.easeOut}, 1)
-	//welcomeShadow.from(text, 2, {textShadow:"3vmin 3vmin 0vmin #DFD2A0, 5vmin 5vmin 0vmin #D7783F, 8vmin 8vmin 0vmin #DFD2A0", ease: Back.easeOut.config(1.7)}, 0);
-	//welcomeShadow.yoyo(true).repeat(2);
 </script>
