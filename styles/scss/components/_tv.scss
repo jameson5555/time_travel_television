@@ -7,6 +7,10 @@ $gold: darken(gold, 15%);
 	margin: 0 auto;
 	position: relative;
 	z-index: 2;
+	@include transition(width $morph-speed ease-out);
+	.video-playing & {
+		width: 98vmin;
+	}
 	.outer {
 		&3 {
 			@include transition($transition);
