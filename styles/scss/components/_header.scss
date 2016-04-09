@@ -7,9 +7,10 @@
 		text-shadow: 0.25vmin 0.25vmin 0 rgba($tan,0.6), 0.5vmin 0.5vmin 0 rgba($orange-lt,0.6), 1vmin 1vmin 0 rgba($tan,0.6);
 		z-index: 1;
 		position: relative;
-		@include transition(font-size $morph-speed ease-out);
+		@include transition(font-size $morph-speed ease-out, padding $morph-speed ease-out);
 		.video-playing & {
-			font-size: 2vmin;
+			font-size: 2.5vmin;
+			padding: 1vmin 1vmin 2vmin;
 		}
 		a {
 			color: $brown;
