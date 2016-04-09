@@ -55,7 +55,7 @@
 	}
 	.show-btn {
 		float: right;
-		@include transition(transform, 0.5s ease-out);
+		@include transition(transform, 0.7s ease-out);
 		@include transition-delay(0.3s);
 		button {
 			padding-left: 0;

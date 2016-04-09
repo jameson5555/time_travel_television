@@ -3,7 +3,7 @@
 	font-size: 10vmin;
 	line-height: 1.3;
 	text-align: center;
-	text-shadow: 0.5vmin 0.5vmin 0 $tan, 1vmin 1vmin 0 $orange-lt, 1.5vmin 1.5vmin 0 $tan;
+	text-shadow: 0.5vmin 0.5vmin 0 rgba($tan,0.6), 1vmin 1vmin 0 rgba($orange-lt,0.6), 1.5vmin 1.5vmin 0 rgba($tan,0.6);
 	@include position(fixed, 50% null null 50%);
 	@include size(80vmin);
 	margin-top: -40vmin;
