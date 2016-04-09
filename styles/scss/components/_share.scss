@@ -1,10 +1,11 @@
 .share-container {
 	@include position(fixed, null 0px 0px 0px);
+	z-index: 100;
 	.message {
 		>div {
-			padding: 4vmin 2vmin 2vmin;
+			padding: 3vmin 1vmin 1vmin;
 			color: $tan;
-			font-size: 5vmin;
+			font-size: 1rem;
 			line-height: 1.3;
 			font-family: arial, sans-serif;
 			form {
@@ -17,11 +18,11 @@
 	}
 }
 .share {
-	background: $brown;
+	background: rgba($brown, 0.8);
 	padding-right: 0.5vmin;
 	border-top-right-radius: 5vmin;
 	@include transform(translateX(calc(-100% + 13vmin)));
-	@include transition(transform, 0.3s ease-out);
+	@include transition(transform, 0.5s ease-out);
 	&.open {
 		@include transform(translateX(0));
 		.show-btn {
@@ -48,11 +49,14 @@
 	svg {
 		color: $tan;
 		@include size(6vmin);
+		// max-height: 20px;
+		// max-width: 20px;
 		@include transition(color, 0.2s ease-out);
 	}
 	.show-btn {
 		float: right;
 		@include transition(transform, 0.5s ease-out);
+		@include transition-delay(0.3s);
 		button {
 			padding-left: 0;
 			padding-right: 4vmin;

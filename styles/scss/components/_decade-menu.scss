@@ -26,7 +26,7 @@
 			>a {
 				display: block;
 				color: $brown;
-				text-shadow: 0.25vmin 0.25vmin 0 $tan, 0.5vmin 0.5vmin 0 $orange-lt, 1vmin 1vmin 0 $tan;
+				text-shadow: 0.25vmin 0.25vmin 0 rgba($tan,0.6), 0.5vmin 0.5vmin 0 rgba($orange-lt,0.6), 1vmin 1vmin 0 rgba($tan,0.6);
 				z-index: 1;
 				position: relative;
 				padding: 2vmin;
