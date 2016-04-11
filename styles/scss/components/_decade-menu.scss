@@ -1,10 +1,6 @@
 .decades {
 	margin-bottom: 2vmin;
 	font-size: 6vmin;
-	@include transition(font-size $morph-speed ease-out);
-	.video-playing & {
-		font-size: 4vmin;
-	}
 	.menu {
 		list-style-type: none;
 		text-align: center;
@@ -13,10 +9,6 @@
 			display: inline-block;
 			position: relative;
 			padding-top: 5vmin;
-			@include transition(padding $morph-speed ease-out);
-			.video-playing & {
-				padding-top: 3vmin;
-			}
 			&:before {
 				content: '';
 				border-left: 1px solid $brown;
@@ -38,11 +30,8 @@
 				z-index: 1;
 				position: relative;
 				padding: 2vmin;
-				@include transition(transform, 0.3s ease-out, padding $morph-speed ease-out);
+				@include transition(transform, 0.3s ease-out);
 				@include transform(scale(0.6));
-				.video-playing & {
-					padding: 2vmin;
-				}
 			}
 			&:hover {
 				&:before {

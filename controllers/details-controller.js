@@ -99,7 +99,6 @@ Application.Controllers.controller('detailsController', ['menuService', '$scope'
       $scope.initialVideo = randomVideo;
 
       $scope.$on('youtube.player.ready', function($event, player) {
-        $('body').addClass('video-playing');
         if (firstTime) {
           var videoLength = player.getDuration();
           var startPoint = getRandomStartPoint(0,videoLength);
