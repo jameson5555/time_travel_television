@@ -59,7 +59,7 @@ Application.Controllers.controller('detailsController', ['menuService', '$scope'
           "1FvUQTTPcac", // benny hill
           "on2fRhovQP8", // shazam
           "IrwMyQ3_7P8", // the amazing spiderman
-          "OxGMAskCA0w", // streets of san francisco
+          //"OxGMAskCA0w", // streets of san francisco (no longer available due to copyright claim)
           "SyKD4KagqbA", // steve martin standup snl
           "XohfkDibhMc" // doctor who tom baker
         ];
@@ -114,8 +114,8 @@ Application.Controllers.controller('detailsController', ['menuService', '$scope'
     $scope.player = {
       vars: {
         autoplay: 1,
-        controls: 0,
-        modestbranding: 1,
+        controls: 1,
+        modestbranding: 0,
         origin: 'http://timetraveltelevision.com',
         showinfo: 0
       }
