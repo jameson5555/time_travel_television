@@ -9,6 +9,7 @@ Application.Controllers.controller('detailsController', ['menuService', '$scope'
     var newVideo;
     var firstTime = true;
     id = $routeParams.id;
+    loadIcons();
 
     function getVideoId(array) {
       return array[Math.floor(Math.random() * array.length)];
@@ -110,12 +111,16 @@ Application.Controllers.controller('detailsController', ['menuService', '$scope'
       $scope.$on('youtube.player.ended', function ($event, player) {
         changeChannel(randomVideo, item, player);
       });
+
+      $scope.fullScreen = function() {
+        $('body').toggleClass('zoomed');
+      };
     });
     $scope.player = {
       vars: {
         autoplay: 1,
-        controls: 1,
-        modestbranding: 0,
+        controls: 0,
+        modestbranding: 1,
         origin: 'http://timetraveltelevision.com',
         showinfo: 0
       }

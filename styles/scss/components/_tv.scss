@@ -18,6 +18,17 @@ $gold: darken(gold, 15%);
 			@include transition($transition);
 		}
 	}
+	.dial {
+		.control {
+			cursor: pointer;
+		}
+		.svg-icon>svg {
+			@include position(absolute, 50% null null 50%);
+			margin: -25% 0 0 -25%;
+			width: 50%;
+			height: 50%;
+		}
+	}
 	.decade- {
 		&60s {
 			.outer {
@@ -68,20 +79,20 @@ $gold: darken(gold, 15%);
 				width: 8vmin;
 				height: 17vmin;
 				z-index: 2;
-				cursor: pointer;
 				.control {
-					@include position(absolute, null 1vmin 3vmin null);
+					@include position(absolute, null 2vmin 6vmin null);
 					border-radius: 50%;
-					background: $gold;
+					background: lighten($wood, 5%);
 					border: 1px solid black;
 					cursor: pointer;
-					@include size(8vmin)
-					cursor: pointer;
+					@include size(6vmin)
+					svg {
+						fill: black;
+					}
 					&2 {
-						background: rgba(255,255,255, 0.3);
 						@include size(6vmin);
 						right: 2vmin;
-						bottom: 4vmin;
+						bottom: -2vmin;
 					}
 				}
 			}
@@ -136,11 +147,10 @@ $gold: darken(gold, 15%);
 				width: 8vmin;
 				height: 17vmin;
 				z-index: 2;
-				cursor: pointer;
 				.control {
 					@include position(absolute, null 1vmin 3vmin null);
 					border-radius: 50%;
-					background: silver;
+					background: lighten($wood, 5%);
 					border: 1px solid black;
 					cursor: pointer;
 					@include size(5vmin)
@@ -199,24 +209,24 @@ $gold: darken(gold, 15%);
 				}
 			}
 			.dial {
-				@include position(absolute, null 6vmin 2vmin null);
-				//@include size(3vh 5vw);
-				background: silver;
-				cursor: pointer;
-				display: inline-block;
-				height: 6vmin;
-				width: 9vmin;
-				padding-top: 1vmin;
 				.control {
-					display: inline-block;
-					padding: 0 1.2vmin;
+					position: absolute;
+					bottom: 2vmin;
+					height: 5vmin;
+					width: 5vmin;
+					svg {
+						fill: silver;
+						height: 80%;
+						width: 80%;
+						top: 0;
+						left: 0;
+						margin: 0 auto;
+					}
 					&1 {
-						@include triangle(4vmin, gray, left);
-						float: left;
+						left: 13vmin;
 					}
 					&2 {
-						@include triangle(4vmin, gray, right);
-						float: right;
+						right: 12vmin;
 					}
 				}
 			}
@@ -257,25 +267,24 @@ $gold: darken(gold, 15%);
 				padding-bottom: 60%;
 			}
 			.dial {
-				@include position(absolute, null 6vmin 1.5vmin null);
-				//@include size(3vh 5vw);
-				background: gray;
-				border: 1px solid black;
-				cursor: pointer;
-				display: inline-block;
-				height: 5vmin;
-				width: 9vmin;
-				padding-top: 0.5vmin;
 				.control {
-					display: inline-block;
-					padding: 0 1vmin;
+					position: absolute;
+					bottom: 0.5vmin;
+					height: 5vmin;
+					width: 5vmin;
+					svg {
+						fill: black;
+						height: 60%;
+						width: 60%;
+						top: 0;
+						left: 0;
+						margin: 0 auto;
+					}
 					&1 {
-						@include triangle(3vmin, black, left);
-						float: left;
+						left: 18vmin;
 					}
 					&2 {
-						@include triangle(3vmin, black, right);
-						float: right;
+						right: 16vmin;
 					}
 				}
 			}
@@ -301,5 +310,58 @@ $gold: darken(gold, 15%);
 	width: 100%;
 	height: 100%;
 	border: 0;
+}
+
+////////////////////////////
+// full screen mode
+//////////////////////////
+.zoomed {
+	.tv-container {
+		@include position(absolute, -99999em null null -99999em);
+		.dial {
+			.control1 {
+				display: none;
+			}
+			.control2 {
+				@include position(fixed, null 2vmin 1vmin null);
+				z-index: 100;
+				color: $tan;
+				@include size(6vmin);
+				opacity: 0.5;
+				svg {
+					fill: $tan !important;
+					width: 100% !important;
+					height: 100% !important;
+				}
+				&:hover {
+					opacity: 1;
+				}
+			}
+		}
+	}
+	.embed-responsive-item {
+		@include position(fixed, 0px 0px 0px 0px);
+		height: 100vh;
+		width: 100vw;
+	}
+	.share-container {
+		.share {
+			&:not(.open) {
+				background: transparent;
+			}
+			&.open {
+				opacity: 1;
+				button {
+					opacity: 1;
+				}
+			}
+			button {
+				opacity: 0.5;
+				&:hover {
+					opacity: 1;
+				}
+			}
+		}
+	}
 }
 

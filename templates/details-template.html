@@ -8,9 +8,9 @@
 					<youtube-video class="embed-responsive-item" video-id="initialVideo" player="tv" player-vars="player.vars"></youtube-video>
 				</div>
 			</div>
-			<div class='dial' ng-click='tv.seekTo(99999999)'>
-				<div class='control control1'></div>
-				<div class='control control2'></div>
+			<div class='dial'>
+				<div class='svg-icon icon-change-channel control control1' ng-click='tv.seekTo(99999999)'></div>
+				<div class='svg-icon icon-full-screen control control2' ng-click='fullScreen()'></div>
 			</div>
 		</div>
 	</div>
