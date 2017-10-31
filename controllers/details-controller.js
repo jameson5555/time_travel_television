@@ -47,7 +47,7 @@ Application.Controllers.controller('detailsController', ['menuService', '$scope'
           "bBk9-m3wNLc", // 60s commercials (cigarrettes, etc.)
           "TzclE11RNhc", // 60s commercials boys toys
           "XHQ-35uRlfA", // dragnet
-          "wukv0VAkiLs", // dick van dyke
+          "Qi5BM3nZ2kM", // dick van dyke promo
           "F5zM5FfloSw", // the lucy show - lucy the bean queen
           "A_kO77jPGuU", // beverly hillbillies
           "hRsfKK34SFY", // tardis takes off for first time
