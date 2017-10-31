@@ -78,7 +78,7 @@ Application.Controllers.controller('detailsController', ['menuService', '$scope'
           "lAD6Obi7Cag", // want my mtv
           "J-7be88JnJ0", // different strokes
           "Zn5OJGucveg", // madonna crazy for you
-          "DNSUOFgj97M", // madonna material girl
+          "rSaC-YbSDpo", // madonna borderline
           "idnwh6iDnXA" // where's the beef
         ];
       } if (item.name === '90s') {
