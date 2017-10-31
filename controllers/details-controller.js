@@ -79,7 +79,7 @@ Application.Controllers.controller('detailsController', ['menuService', '$scope'
           "J-7be88JnJ0", // different strokes
           "Zn5OJGucveg", // madonna crazy for you
           "DNSUOFgj97M", // madonna material girl
-          "8dnUs2AqWvs" // where's the beef
+          "idnwh6iDnXA" // where's the beef
         ];
       } if (item.name === '90s') {
         item.videoIds = [
