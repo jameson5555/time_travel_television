@@ -49,7 +49,7 @@ Application.Controllers.controller('detailsController', ['menuService', '$scope'
           "XHQ-35uRlfA", // dragnet
           "wukv0VAkiLs", // dick van dyke
           "F5zM5FfloSw", // the lucy show - lucy the bean queen
-          "RHcl84DqSFU", // beverly hillbillies
+          "A_kO77jPGuU", // beverly hillbillies
           "hRsfKK34SFY", // tardis takes off for first time
           "YN7pCuNtO6Q" // doctor who first intro
         ];
