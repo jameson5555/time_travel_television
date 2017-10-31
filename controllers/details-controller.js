@@ -91,7 +91,7 @@ Application.Controllers.controller('detailsController', ['menuService', '$scope'
           "Jne9t8sHpUc", // alanis morisette ironic
           "010KyIQjkTk", // kris kross jump
           "esEdC0c3YI4", // only happy when it rains
-          "S5QKW5-0cBo", // home improvement
+          "QbZI387PCew", // home improvement
           "cZaglHQOgt8", // outshined live
           "Kr0tTbTbmVA" // summertime by fresh prince
         ];
