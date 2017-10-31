@@ -57,7 +57,7 @@ Application.Controllers.controller('detailsController', ['menuService', '$scope'
       if (item.name === '70s') {
         item.videoIds = [
           "N8fkjTjM-lE", // funny 70s commercials
-          "1FvUQTTPcac", // benny hill
+          "VbGCM3vgack", // benny hill
           "on2fRhovQP8", // shazam
           "IrwMyQ3_7P8", // the amazing spiderman
           //"OxGMAskCA0w", // streets of san francisco (no longer available due to copyright claim)
