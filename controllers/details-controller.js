@@ -83,7 +83,7 @@ Application.Controllers.controller('detailsController', ['menuService', '$scope'
         ];
       } if (item.name === '90s') {
         item.videoIds = [
-          "oCsbUSk5-O8", // nirvana unplugged
+          "acJktomTrT0", // pearl jam unplugged
           "ms61I54CeQA", // creed parody
           "0kYYiRmtMH4", // 90s commercials vol 1
           "qFSAds56rcQ", // 90s commercials vol 2
