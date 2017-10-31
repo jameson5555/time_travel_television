@@ -76,7 +76,7 @@ Application.Controllers.controller('detailsController', ['menuService', '$scope'
           "w2BCG4YZy8Y", // 80s commercials vol 4
           "N6uEMOeDZsA", // want a new drug
           "lAD6Obi7Cag", // want my mtv
-          "Q0vlJodaDmc", // different strokes
+          "J-7be88JnJ0", // different strokes
           "Zn5OJGucveg", // madonna crazy for you
           "DNSUOFgj97M", // madonna material girl
           "8dnUs2AqWvs" // where's the beef
